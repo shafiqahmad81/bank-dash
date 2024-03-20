@@ -5,7 +5,7 @@ function App() {
       <header className="w-full bg-white flex sticky top-0 z-50">
         <div className="w-[250px] border-r border-border pl-9.5 pr-20 py-5 flex items-center ">
           <div className="flex items-center">
-            <img src="/images/logo.png" alt="Logo Image" />
+            <img src="../src/assets/logo.png" alt="Logo Image" />
             <span className=" font-mont font-black text-2.1xl ml-2 text-[#343C6A ]">
               BankDash.
             </span>
@@ -25,18 +25,21 @@ function App() {
                 />
                 <img
                   className="flex items-center absolute ml-6"
-                  src="/images/search.png "
+                  src="../src/assets/search.png "
                   alt="Icon"
                 />
               </div>
             </form>
             <div className="w-[50px] h-[50px] bg-body flex items-center justify-center rounded-full">
-              <img src="/images/settings.png" alt="Setting icon" />
+              <img src="../src/assets/settings.png" alt="Setting icon" />
             </div>
             <div className="w-[50px] h-[50px] bg-body flex items-center justify-center rounded-full">
-              <img src="/images/notification.png" alt="Notification icon" />
+              <img
+                src="../src/assets/notification.png"
+                alt="Notification icon"
+              />
             </div>
-            <img src="/images/abatar.png" alt="Logo Image" />
+            <img src="../src/assets/abatar.png" alt="Logo Image" />
           </div>
         </div>
       </header>
