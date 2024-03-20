@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Mont Heavy DEMO";
+    src: url("./assets/fonts/Mont-HeavyDEMO.eot");
+    src: url("./assets/fonts/Mont-HeavyDEMO.eot?#iefix")
+        format("embedded-opentype"),
+      url("./assets/fonts/Mont-HeavyDEMO.woff2") format("woff2"),
+      url("./assets/fonts/Mont-HeavyDEMO.woff") format("woff"),
+      url("./assets/fonts/Mont-HeavyDEMO.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  html {
+    font-family: "inter";
+  }
+}
