@@ -2,52 +2,90 @@ function App() {
   return (
     <>
       {/* Header section start */}
-      <header className="w-full bg-white flex sticky top-0 z-50">
-        <div className="w-[250px] border-r border-border pl-9.5 pr-20 py-5 flex items-center ">
-          <div className="flex items-center">
-            <img src="../src/assets/images/logo.png" alt="Logo Image" />
-            <span className=" font-mont font-black text-2.1xl ml-2 text-[#343C6A ]">
-              BankDash.
-            </span>
+      <header className="w-full md:w-[calc(100%-230px)] lg:w-[calc(100%-250px)] md:ml-58 lg:ml-62 bg-white sticky top-0 z-50">
+        <div className="hidden md:flex items-center justify-between grow px-6.1 lg:px-10 py-5 lg:border-b border-border">
+          <div className=" mr-5">
+            <h1 className=" font-semibold text-2.1xl lg:text-2.4xl">
+              Overview
+            </h1>
           </div>
-        </div>
-        <div className="flex items-center justify-between w-full pl-10 pr-10 py-5 border-b border-border">
-          <div>
-            <h1 className=" font-semibold text-2.4xl">Overview</h1>
-          </div>
-          <div className="flex items-center gap-7.5">
-            <form>
-              <div className="relative flex items-center font-normal">
-                <input
-                  type="text"
-                  placeholder="Search for something"
-                  className="hidden xl:block w-[255px] focus:outline-0 font-inter font-normal placeholder:text-search bg-body py-4 rounded-full pr-3 pl-14"
-                />
+          <div className="flex items-center gap-5 lg:gap-7.5">
+            <div className="hidden md:flex items-center gap-5 lg:gap-7.5">
+              <form className="flex relative items-center">
+                <div className=" absolute right-0 w-0 lg:w-auto overflow-hidden lg:relative flex items-center font-normal">
+                  <input
+                    type="text"
+                    placeholder="Search for something"
+                    className=" w-[255px] focus:outline-0 font-inter font-normal placeholder:text-search bg-body py-3 lg:py-4 rounded-full ps-3 pe-14 lg:pe-3 lg:ps-14"
+                  />
+                  <img
+                    className=" hidden lg:flex items-center absolute ml-6"
+                    src="../src/assets/images/search.png "
+                    alt="Icon"
+                  />
+                </div>
+                <button className="right-2 lg:hidden relative z-10 w-10 h-10 lg:w-12.5 lg:h-12.5 bg-body flex items-center justify-center rounded-full">
+                  <img
+                    src="../src/assets/images/search.png"
+                    alt="search icon"
+                  />
+                </button>
+              </form>
+              <div className=" w-10 h-10 lg:w-12.5 lg:h-12.5 bg-body flex items-center justify-center rounded-full">
                 <img
-                  className="flex items-center absolute ml-6"
-                  src="../src/assets/images/search.png "
-                  alt="Icon"
+                  src="../src/assets/images/settings.png"
+                  alt="Setting icon"
                 />
               </div>
-            </form>
-            <div className="w-[50px] h-[50px] bg-body flex items-center justify-center rounded-full">
-              <img src="../src/assets/images/settings.png" alt="Setting icon" />
+              <div className="w-10 h-10 lg:w-12.5 lg:h-12.5 bg-body flex items-center justify-center rounded-full">
+                <img
+                  src="../src/assets/images/notification.png"
+                  alt="Notification icon"
+                />
+              </div>
             </div>
-            <div className="w-[50px] h-[50px] bg-body flex items-center justify-center rounded-full">
-              <img
-                src="../src/assets/images/notification.png"
-                alt="Notification icon"
-              />
-            </div>
-            <img src="../src/assets/images/abatar.png" alt="Logo Image" />
+            <figure className=" w-11.1 h-11.1 lg:w-16.5 flex items-center">
+              <img src="../src/assets/images/abatar.png" alt="Logo Image" />
+            </figure>
           </div>
         </div>
+        <div className="md:hidden flex items-center justify-between px-6.1 lg:px-10 py-5">
+          <figure>
+            <img src="../src/assets/images/responsive-icon.png" alt="Icon" />
+          </figure>
+          <h1 className=" font-semibold text-2.1xl lg:text-2.4xl">Overview</h1>
+          <figure className=" w-11.1 h-11.1 lg:w-16.5 flex items-center">
+            <img src="../src/assets/images/abatar.png" alt="Logo Image" />
+          </figure>
+        </div>
+        <form className="md:hidden flex items-center justify-center">
+          <div className="relative w-full  flex items-center font-normal px-6.1 lg:px-10 mb-3">
+            <input
+              type="text"
+              placeholder="Search for something"
+              className=" w-full focus:outline-0 font-inter font-normal placeholder:text-search bg-body py-3 rounded-full pe-3 ps-14"
+            />
+            <img
+              className="flex items-center absolute ml-6"
+              src="../src/assets/images/search.png "
+              alt="Icon"
+            />
+          </div>
+        </form>
       </header>
       {/* Header end */}
 
       {/* aside section start */}
-      <aside className="hidden md:block w-[250px] fixed left-0 top-25 font-medium border-r border-border h-screen">
-        <div className=" max-h-[calc(100vh-101px)] overflow-y-auto">
+      <aside className="hidden md:block w-58 lg:w-[250px] fixed left-0 top-0 font-medium border-r border-border h-screen">
+        <div className="flex w-58 lg:w-62 lg:border-r border-border pl-6.1 lg:pl-9.5 pr-20 py-6 lg:p-8 ">
+          <div className="flex items-center">
+            <img src="../src/assets/images/logo.png" alt="Logo Image" />
+            <span className=" font-mont font-black text-2.1xl ml-2 text-[#343C6A ] leading-8">
+              BankDash.
+            </span>
+          </div>
+        </div>
+        <div className=" max-h-screen overflow-y-auto">
           <ul>
             <li className=" active: relative py-4 pl-11 text-lg leading-5  hover:text-blue transition-all duration-300  before:w-2 before:h-full  before:absolute before:left-0 before:top-0 before:rounded-r-10 before:transition-all before:duration-300 text-blue before:bg-blue">
               <a className=" flex items-center gap-6.5" href="#">
@@ -272,9 +310,9 @@ function App() {
 
       {/* aside section end */}
       {/* main section start */}
-      <main className=" w-[calc(100%-250px)] h-screen bg-body py-6 px-10 ml-62">
+      <main className="w-full md:w-[calc(100%-230px)] lg:w-[calc(100%-250px)] h-screen md:bg-body px-6.1 lg:px-10 lg:ml-62 md:ml-58">
         <div className=" max-h-[calc(100vh-101px)] overflow-y-auto">
-          <div className="flex justify-between ">
+          <div className="flex justify-between pt-6.1">
             <h2 className="font-semibold text-22 leading-6 text-indigo">
               My Cards
             </h2>
